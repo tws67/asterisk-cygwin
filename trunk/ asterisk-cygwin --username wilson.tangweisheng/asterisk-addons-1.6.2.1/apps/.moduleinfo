@@ -1,0 +1,7 @@
+<category name="MENUSELECT_APPS" displayname="Applications" remove_on_change="apps/modules.link">
+<member name="app_addon_sql_mysql" displayname="Simple Mysql Interface" remove_on_change="apps/app_addon_sql_mysql.o apps/app_addon_sql_mysql.so">
+	<depend>mysqlclient</depend>
+</member>
+<member name="app_saycountpl" displayname="Say polish counting words" remove_on_change="apps/app_saycountpl.o apps/app_saycountpl.so">
+</member>
+</category>

@@ -1,0 +1,86 @@
+termcap-compat (1.2.3) frozen unstable; urgency=low
+
+  * Updated xterm entries to match those used by xfree86 3.3.6 Debian package.
+    (Closes: #55841)
+
+ -- Christian Hudon <chrish@debian.org>  Thu,  3 Feb 2000 22:17:16 -0500
+
+termcap-compat (1.2.2) unstable; urgency=low
+
+  * Updated to standards version 3.1.1.1
+
+ -- Christian Hudon <chrish@debian.org>  Fri, 31 Dec 1999 14:15:22 -0500
+
+termcap-compat (1.2.1) unstable; urgency=low
+
+  * Now compiled only for i386. Email me if termcap-compat is needed for
+    some other architecture. Closes: #48747
+
+ -- Christian Hudon <chrish@debian.org>  Fri, 31 Dec 1999 12:13:11 -0500
+
+termcap-compat (1.2) unstable; urgency=low
+
+  * Updated termcap file to most recent upstream version.
+  * Added xterm-debian terminal type. (Closes: #38400, #39553, #46276)
+  * Added call to ldconfig in postinst as required by policy
+  * Made package compliant with policy 3.0 and the FHS.
+
+ -- Christian Hudon <chrish@debian.org>  Sat, 30 Oct 1999 01:48:57 -0400
+
+termcap-compat (1.1.2) stable unstable; urgency=HIGH
+
+  * Corrected typo in description. (Closes: #18972)
+  * Fixed two buffer overflows. (Closes: #24200, #43141)
+  * Removed hardcoded reference to i486. (Closes: #24785)
+  * Added check to debian/rules to make sure that package 
+    is compiled with altgcc. (Closes: #45363)
+  * Moved from section misc to oldlibs.
+
+ -- Christian Hudon <chrish@debian.org>  Tue, 26 Oct 1999 23:02:23 -0400
+
+termcap-compat (1.1.1) unstable; urgency=low
+
+  * Upgraded /etc/termcap to version 9.3.25
+  * Added binary-indep and binary-arch targets to debian/rules. (Fixes #12743)
+  * Linked shared library against libc (Fixes #16568)
+  * Shared library stripped with --strip-unneeded.
+  * Removed ldconfig calls in postinst and postrm.
+  * Compiled library with -D_REENTRANT.
+  * Added libtermcap.so.2 symlink
+  * Renamed upstream changelog to 'changelog' (instead of 'ChangeLog').
+  * ... and generally updated package to comply with policy version 2.4.0.0
+
+ -- Christian Hudon <chrish@debian.org>  Fri, 13 Feb 1998 21:32:43 -0500
+
+termcap-compat (1.1.0) frozen; urgency=low
+
+  * Made package architecture-independent. (3721)
+  * Converted to new packaging standards.
+  * Upgraded /etc/termcap to version 9.13.15
+  * Changed version numbering scheme slightly (no "-[1-9]" anymore)
+    to make the source package work better with the new dpkg source format.
+  * Closes all outstanding termcap bugs (836, 1803)
+  * Modified description to make it clear that termcap-compat isn't meant
+    to be used to compile program. Says to use ncurses' termcap emulation
+    routines for programs that need termcap. (Using them is as simple as
+    replacing -ltermcap by -lncurses in the makefile.)
+
+ -- Christian Hudon <chrish@debian.org>  Mon, 25 Nov 1996 23:01:27 -0500
+
+termcap-compat (1.0.0-2) unstable; urgency=low
+  
+  * Cleared up copyright.
+  * Changed maintainer address.
+
+ -- Christian Hudon <chrish@debian.org>  Wed, 12 Jun 1996 21:08:24 -0400
+
+termcap-compat (1.0.0-1) unstable; urgency=low
+
+  * Initial release.
+  
+ -- Christian Hudon <chrish@debian.org>  Fri, 10 May 1996 22:01:29 -0500
+  
+Local variables:
+mode: debian-changelog
+End:
+

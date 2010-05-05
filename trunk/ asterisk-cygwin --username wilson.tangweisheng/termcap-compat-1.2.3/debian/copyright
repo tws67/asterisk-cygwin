@@ -1,0 +1,39 @@
+This is the Debian GNU/Linux termcap-compat package, 
+
+This package was put together by Christian Hudon 
+<chrish@debian.org> by combining the following packages:
+
+ ftp://sunsite.unc.edu/pub/Linux/GCC/termcap-2.0.8.tar.gz
+  (for the libtermcap.so shared library)
+ http://www.ccil.org/~esr/terminfo/termtypes.tc.gz
+  (for the termcap database file, more information available 
+   on http://www.ccil.org/~esr/ncurses.html)
+
+Linux termcap is Copyright (C) Miquel van Smoorenburg 1994,1995,1996 (for
+the termcap.c part) and Copyright (C) 1985, 1987, 1993 Free Software
+Foundation, Inc. (for the tparam.c part) It falls under the GNU Library
+General Public License, a copy of which can be found in
+'/usr/share/common-licenses/LGPL' on Debian GNU/Linux systems.
+
+As for the ncurses termcap database... (quoting from the termcap file itself)
+
+ # COPYRIGHTS AND OTHER DELUSIONS
+ #
+ # The BSD ancestor of this file had a standard Regents of the University of
+ # California copyright with dates from 1980 to 1993.
+ #
+ # Some information has been merged in from a terminfo file SCO distributes.
+ # It has an obnoxious boilerplate copyright which I'm ignoring because they 
+ # took so much of the content from the ancestral BSD versions of this file
+ # and didn't attribute it, thereby violating the BSD Regents' copyright.
+ #
+ # Not that anyone should care.  However many valid functions copyrights may
+ # serve, putting one on a termcap/terminfo file with hundreds of anonymous
+ # contributors makes about as much sense as copyrighting a wall-full of
+ # graffiti -- it's legally dubious, ethically bogus, and patently ridiculous.
+ #
+ # This file deliberately has no copyright.  It belongs to no one and everyone.
+ # If you claim you own it, you will merely succeed in looking like a fool. 
+ # Use it as you like.  Use it at your own risk.  Copy and redistribute freely.
+ # There are no guarantees anywhere.  Svaha!
+

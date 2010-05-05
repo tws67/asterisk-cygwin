@@ -1,0 +1,7 @@
+<category name="MENUSELECT_CHANNELS" displayname="Channel Drivers" remove_on_change="channels/modules.link">
+<member name="chan_mobile" displayname="Bluetooth Mobile Device Channel Driver" remove_on_change="channels/chan_mobile.o channels/chan_mobile.so">
+	<depend>bluetooth</depend>
+</member>
+<member name="chan_ooh323" displayname="Objective Systems H323 Channel" remove_on_change="channels/chan_ooh323.o channels/chan_ooh323.so">
+</member>
+</category>

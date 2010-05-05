@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in 
+    purge)
+	# Remove conffiles.
+	rm -f /etc/termcap ;;
+
+    abort-install)
+	if [ "$2" = "" ]; then
+	    # First-time install of termcap-compat package failed.
+	    # Restore /etc/termcap from the backup copy we made in the preinst.
+	    if [ -f /etc/termcap.old ]; then
+		echo Restoring old termcap file from /etc/termcap.old
+		mv /etc/termcap.old /etc/termcap
+	    fi
+	fi
+esac
+

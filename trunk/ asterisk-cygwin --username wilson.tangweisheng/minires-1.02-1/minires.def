@@ -1,0 +1,37 @@
+EXPORTS
+        __dn_comp
+        __dn_expand
+        __dn_skipname
+        __res_close
+        __res_init
+        __res_mkquery
+        __res_nclose
+        __res_ninit
+        __res_nmkquery
+        __res_nquery
+        __res_nquerydomain
+        __res_nsearch
+        __res_nsend
+        __res_query
+        __res_querydomain
+        __res_search
+        __res_send
+        __res_state
+
+        dn_comp = __dn_comp
+        dn_expand = __dn_expand
+        dn_skipname = __dn_skipname
+        res_close = __res_close
+        res_init = __res_init
+        res_mkquery = __res_mkquery
+        res_nclose = __res_nclose
+        res_ninit = __res_ninit
+        res_nmkquery = __res_nmkquery
+        res_nquery = __res_nquery
+        res_nquerydomain = __res_nquerydomain
+        res_nsearch = __res_nsearch
+        res_nsend = __res_nsend
+        res_query = __res_query
+        res_querydomain = __res_querydomain
+        res_search = __res_search
+        res_send = __res_send

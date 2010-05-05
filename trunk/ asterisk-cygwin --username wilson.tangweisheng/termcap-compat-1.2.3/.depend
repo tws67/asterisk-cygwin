@@ -1,0 +1,3 @@
+termcap.o pic/termcap.o: termcap.c
+tparam.o pic/tparam.o: tparam.c
+version.o pic/version.o: version.c

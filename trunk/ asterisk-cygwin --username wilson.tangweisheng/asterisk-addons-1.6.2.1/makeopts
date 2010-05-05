@@ -1,0 +1,54 @@
+# NOTE: Names of _INCLUDE and _LIB entries in this file must be
+#       the exact uppercase equivalents of the names used for
+#       dependencies in menuselect for the same package.
+
+CC=gcc
+HOST_CC=gcc
+
+INSTALL=/usr/bin/install -c
+AWK=/usr/bin/awk
+GREP=/usr/bin/grep
+BASENAME=/usr/bin/basename
+SHELL=/bin/sh
+LN=/usr/bin/ln
+
+CROSS_ARCH=Unix
+CROSS_PROC=i686
+PROC=i686
+OSARCH=Unix
+OSREV=1.7.5(0.225/5/3)
+
+prefix = /usr
+exec_prefix = ${prefix}
+
+bindir = ${exec_prefix}/bin
+datarootdir = ${prefix}/share
+datadir = ${datarootdir}
+includedir = ${prefix}/include
+infodir = ${datarootdir}/info
+libdir = ${exec_prefix}/lib
+libexecdir = ${exec_prefix}/libexec
+localstatedir = /var
+mandir = ${datarootdir}/man
+sbindir = ${exec_prefix}/sbin
+sharedstatedir = ${prefix}/com
+sysconfdir = /etc
+
+AST_DEVMODE=
+AST_DECLARATION_AFTER_STATEMENT=-Wdeclaration-after-statement
+
+BLUETOOTH_LIB=
+BLUETOOTH_INCLUDE=
+
+CURSES_LIB=
+CURSES_INCLUDE=
+
+MYSQLCLIENT_LIB=
+MYSQLCLIENT_INCLUDE=
+
+ASTERISK_INCLUDE=
+
+NCURSES_LIB=
+NCURSES_INCLUDE=
+
+XMLSTARLET=:

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<menu name="Asterisk-addons Module Selection">
+<category name="MENUSELECT_APPS" displayname="Applications" remove_on_change="apps/modules.link">
+<member name="app_addon_sql_mysql" displayname="Simple Mysql Interface" remove_on_change="apps/app_addon_sql_mysql.o apps/app_addon_sql_mysql.so">
+	<depend>mysqlclient</depend>
+</member>
+<member name="app_saycountpl" displayname="Say polish counting words" remove_on_change="apps/app_saycountpl.o apps/app_saycountpl.so">
+</member>
+</category>
+<category name="MENUSELECT_CDR" displayname="Call Detail Recording" remove_on_change="cdr/modules.link">
+<member name="cdr_addon_mysql" displayname="MySQL CDR Backend" remove_on_change="cdr/cdr_addon_mysql.o cdr/cdr_addon_mysql.so">
+	<depend>mysqlclient</depend>
+</member>
+</category>
+<category name="MENUSELECT_CHANNELS" displayname="Channel Drivers" remove_on_change="channels/modules.link">
+<member name="chan_mobile" displayname="Bluetooth Mobile Device Channel Driver" remove_on_change="channels/chan_mobile.o channels/chan_mobile.so">
+	<depend>bluetooth</depend>
+</member>
+<member name="chan_ooh323" displayname="Objective Systems H323 Channel" remove_on_change="channels/chan_ooh323.o channels/chan_ooh323.so">
+</member>
+</category>
+<category name="MENUSELECT_FORMATS" displayname="Format Interpreters" remove_on_change="formats/modules.link">
+<member name="format_mp3" displayname="MP3 format [Any rate but 8000hz mono is optimal]" remove_on_change="formats/format_mp3.o formats/format_mp3.so">
+</member>
+</category>
+<category name="MENUSELECT_RES" displayname="Resource Modules" remove_on_change="res/modules.link">
+<member name="res_config_mysql" displayname="MySQL RealTime Configuration Driver" remove_on_change="res/res_config_mysql.o res/res_config_mysql.so">
+	<depend>mysqlclient</depend>
+</member>
+</category>
+</menu>

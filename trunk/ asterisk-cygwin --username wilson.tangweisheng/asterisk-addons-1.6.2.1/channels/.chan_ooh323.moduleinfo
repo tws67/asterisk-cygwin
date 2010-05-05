@@ -1,0 +1,2 @@
+<member name="chan_ooh323" displayname="Objective Systems H323 Channel" remove_on_change="channels/chan_ooh323.o channels/chan_ooh323.so">
+</member>
