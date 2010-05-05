@@ -1,0 +1,36 @@
+Source: termcap-compat
+Build-Depends: altgcc, libc5-altdev
+Maintainer: Christian Hudon <chrish@debian.org>
+Standards-Version: 3.1.1.1
+Section: oldlibs
+Priority: extra
+
+Package: termcap-compat
+Architecture: i386
+Depends: ${shlibs:Depends}
+Replaces: libtermcap
+Conflicts: libtermcap
+Description: Compatibility package for old termcap-based programs.
+ The termcap-compat package provides the libtermcap.so.2 and /etc/termcap
+ files which are required to run non-Debian, binary-only termcap-based
+ programs. Since libc6-based programs are hopefully "modern" enough to be 
+ linked with ncurses (or slang), this package only provides a libc5-based 
+ libtermcap library.
+ .
+ You do not need to install this package to run Debian-packaged programs
+ since Debian GNU/Linux uses terminfo and not termcap. You need this
+ package if a program (that you cannot recompile) fails to run with 
+ the error message "...: can't load library 'libtermcap.so.2'" or complains 
+ about a missing /etc/termcap file.
+ .
+ The termcap-compat package isn't meant to be used to compile programs
+ therefore it doesn't provide all the necessary files for compilation. If you 
+ want to compile a program that claims to need termcap, why not try 
+ ncurses's termcap emulation instead? It's as simple as linking with ncurses 
+ instead of libtermcap (i.e. replace the '-ltermcap' with '-lncurses' in 
+ the makefile). Ncurses' termcap emulation routines translate terminfo entries 
+ to termcap entries on the fly, so you don't even need an /etc/termcap file.
+ .
+ This package provides:
+  libtermcap.so shared library, version 2.0.8
+  termcap database, version 10.2.7

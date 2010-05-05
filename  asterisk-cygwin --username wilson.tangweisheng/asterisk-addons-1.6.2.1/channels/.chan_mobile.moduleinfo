@@ -1,0 +1,3 @@
+<member name="chan_mobile" displayname="Bluetooth Mobile Device Channel Driver" remove_on_change="channels/chan_mobile.o channels/chan_mobile.so">
+	<depend>bluetooth</depend>
+</member>

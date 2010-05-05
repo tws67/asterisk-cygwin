@@ -1,0 +1,72 @@
+#!/usr/bin/make -f
+#
+
+# Must now be compiled with altgcc
+
+ARCH=$(shell dpkg --print-gnu-build-architecture)
+ifeq ($(ARCH),i386)
+ARCH=i486
+endif
+
+build:
+	$(checkdir)
+	test -x /usr/$(ARCH)-linuxlibc1/bin/gcc || (echo This package must be compiled with altgcc;exit 1)
+	PATH=/usr/$(ARCH)-linuxlibc1/bin:$$PATH \
+		$(MAKE) CFLAGS="-O2 -D_REENTRANT -I."
+	touch build
+
+clean:
+	$(checkdir)
+	-rm -rf build debian/files debian/tmp debian/*~ debian/substvars
+	-rm -f .depend .emacs.desktop
+	-$(MAKE) clean
+
+binary: binary-indep binary-arch
+
+binary-indep: checkroot build
+
+binary-arch: checkroot build
+	$(checkdir)
+	-rm -rf debian/tmp debian/substvars
+# Make the directory tree.
+	install -d debian/tmp debian/tmp/DEBIAN
+	install -d debian/tmp/lib
+	install -d debian/tmp/etc
+	install -d debian/tmp/usr/share/doc/termcap-compat
+# Copy copyright file and executables to their proper places.
+	install -m 644 debian/copyright debian/tmp/usr/share/doc/termcap-compat
+	install -m 644 libtermcap.so.2.0.8 debian/tmp/lib
+	strip --strip-unneeded debian/tmp/lib/libtermcap.so.2.0.8
+	(cd debian/tmp/lib && ln -s libtermcap.so.2.0.8 libtermcap.so.2)
+	install -m 644 termtypes.tc debian/tmp/etc/termcap
+	install -m 644 ChangeLog debian/tmp/usr/share/doc/termcap-compat/changelog
+	install -m 644 debian/changelog \
+		debian/tmp/usr/share/doc/termcap-compat/changelog.Debian
+# Compress documentation...
+	test -f debian/tmp/usr/share/doc/termcap-compat/changelog.Debian.gz || \
+		gzip -9 debian/tmp/usr/share/doc/termcap-compat/changelog.Debian
+	test -f debian/tmp/usr/share/doc/termcap-compat/changelog.gz || \
+		gzip -9 debian/tmp/usr/share/doc/termcap-compat/changelog
+# Make the debian control area
+	install -m 755 debian/{pre,post}{inst,rm} debian/tmp/DEBIAN
+	install -m 644 debian/conffiles debian/tmp/DEBIAN
+# Fix permissions...
+	chmod -R u=rwX,go=rX debian/tmp
+	chown -R root.root debian/tmp
+# And finally, build the Debian package!
+	dpkg-shlibdeps debian/tmp/lib/libtermcap.so.2.0.8
+	dpkg-gencontrol -isp
+	dpkg --build debian/tmp ..
+
+define checkdir
+	test -f tparam.c -a -f debian/rules
+endef
+
+source diff:
+	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
+
+checkroot:
+	$(checkdir)
+	test "`whoami`" = root
+
+.PHONY: binary binary-arch binary-indep clean checkroot

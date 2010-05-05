@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+# If this is the first time we're installing this package,
+# make a backup of old /etc/termcap.
+
+if [ "$1" = install -a "$2" = "" ]; then
+    if [ -f /etc/termcap ]; then
+	echo Moving old termcap file to /etc/termcap.old
+	mv -f /etc/termcap /etc/termcap.old
+    fi
+fi

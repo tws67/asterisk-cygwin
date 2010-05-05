@@ -1,0 +1,3 @@
+<member name="app_addon_sql_mysql" displayname="Simple Mysql Interface" remove_on_change="apps/app_addon_sql_mysql.o apps/app_addon_sql_mysql.so">
+	<depend>mysqlclient</depend>
+</member>

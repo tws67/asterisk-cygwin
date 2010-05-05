@@ -1,0 +1,2 @@
+<member name="app_saycountpl" displayname="Say polish counting words" remove_on_change="apps/app_saycountpl.o apps/app_saycountpl.so">
+</member>

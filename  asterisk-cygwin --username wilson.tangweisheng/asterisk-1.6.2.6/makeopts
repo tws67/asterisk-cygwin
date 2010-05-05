@@ -1,0 +1,267 @@
+# NOTE: Names of _INCLUDE and _LIB entries in this file must be
+#       the exact uppercase equivalents of the names used for
+#       dependencies in menuselect for the same package.
+
+CC=gcc
+HOST_CC=cc
+CXX=g++
+
+INSTALL=/usr/bin/install -c
+AWK=gawk
+BISON=/usr/bin/bison
+FLEX=/usr/bin/flex
+GREP=/usr/bin/grep
+AR=/usr/bin/ar
+RANLIB=ranlib
+FIND=/usr/bin/find
+COMPRESS=/usr/bin/compress
+BASENAME=/usr/bin/basename
+ID=/usr/bin/id
+SHELL=/bin/sh
+LN=/usr/bin/ln
+DOT=:
+STRIP=/usr/bin/strip
+WGET=/usr/bin/wget
+FETCH=
+DOWNLOAD=/usr/bin/wget
+RUBBER=:
+KPATHSEA=/usr/bin/kpsewhich
+XMLSTARLET=:
+MD5=md5sum
+
+BUILD_PLATFORM=i686-pc-cygwin
+BUILD_CPU=i686
+BUILD_VENDOR=pc
+BUILD_OS=cygwin
+
+HOST_PLATFORM=i686-pc-cygwin
+HOST_CPU=i686
+HOST_VENDOR=pc
+HOST_OS=cygwin
+
+PROC=i686
+OSARCH=cygwin
+OSREV=1.7.5(0.225/5/3)
+
+GC_CFLAGS=-ffunction-sections
+GC_LDFLAGS=-Wl,--gc-sections
+
+PTHREAD_CFLAGS=
+PTHREAD_LIBS=
+
+CONFIG_CFLAGS=
+CONFIG_LDFLAGS=
+
+prefix = /usr
+exec_prefix = ${prefix}
+
+bindir = ${exec_prefix}/bin
+datarootdir = ${prefix}/share
+datadir = ${datarootdir}
+includedir = ${prefix}/include
+infodir = ${datarootdir}/info
+libdir = ${exec_prefix}/lib
+libexecdir = ${exec_prefix}/libexec
+localstatedir = /var
+mandir = ${datarootdir}/man
+sbindir = ${exec_prefix}/sbin
+sharedstatedir = ${prefix}/com
+sysconfdir = /etc
+
+AST_DEVMODE=
+
+AST_DECLARATION_AFTER_STATEMENT=-Wdeclaration-after-statement
+AST_NO_STRICT_OVERFLOW=-fno-strict-overflow
+AST_SHADOW_WARNINGS=-Wshadow
+AST_FORTIFY_SOURCE=-D_FORTIFY_SOURCE=2
+
+ALSA_INCLUDE=
+ALSA_LIB=
+
+CURL_INCLUDE=
+CURL_LIB=-lcurl -lidn -lssh2 -lssl -lcrypto -lssl -lcrypto -lz
+
+CURSES_INCLUDE=
+CURSES_LIB=
+CURSES_DIR=
+
+EDITLINE_LIB= -ltermcap 
+
+FREETDS_INCLUDE=
+FREETDS_LIB=
+
+GENERIC_ODBC_INCLUDE=
+GENERIC_ODBC_LIB=
+
+GMIME_INCLUDE=
+GMIME_LIB=
+
+HOARD_LIB=
+
+GSM_INTERNAL=yes
+GSM_INCLUDE=
+GSM_LIB=
+
+GTK_INCLUDE=-I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -D_REENTRANT
+GTK_LIB=-L/usr/lib -lgtk -lgdk -lgmodule -lgthread -lglib -lpthread -lintl -lXext -lXext -lX11 -lm
+
+GTK2_INCLUDE=-I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12  
+GTK2_LIB=-lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lpangocairo-1.0 -lgio-2.0 -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lpangoft2-1.0 -lXext -lXfixes -lcairo -lpixman-1 -lglitz -lpng12 -lxcb-render-util -lXrender -lxcb-render -lX11 -lxcb -lXau -lXdmcp -lpango-1.0 -lm -lfontconfig -lexpat -lfreetype -lz -lgobject-2.0 -lgmodule-2.0 -lglib-2.0 -lintl -liconv  
+
+ICONV_INCLUDE=
+ICONV_LIB=
+
+IKSEMEL_INCLUDE=
+IKSEMEL_LIB=
+
+IMAP_TK_INCLUDE=
+IMAP_TK_LIB=
+
+IODBC_INCLUDE=
+IODBC_LIB=
+
+JACK_INCLUDE=
+JACK_LIB=
+
+LDAP_INCLUDE= 
+LDAP_LIB= -lldap 
+
+LUA_INCLUDE= 
+LUA_LIB= -llua -lm
+
+NBS_INCLUDE=
+NBS_LIB=
+
+NCURSES_INCLUDE=
+NCURSES_LIB=
+NCURSES_DIR=
+
+NETSNMP_INCLUDE=
+NETSNMP_LIB=
+
+NEWT_INCLUDE=
+NEWT_LIB=
+
+OGG_INCLUDE= 
+OGG_LIB= -logg 
+
+OSPTK_INCLUDE=
+OSPTK_LIB=
+
+# ossaudio can optionally use ffmpeg, x11, sdl and sdl_image.
+# Because sdl_image in turn depends on sdl, we don't duplicate the include
+OSS_INCLUDE=     
+OSS_LIB=     -lX11 
+
+PGSQL_INCLUDE=-I/usr/include
+PGSQL_LIB=-L/usr/lib -lpq -lz
+
+POPT_INCLUDE= 
+POPT_LIB= -lpopt 
+
+PORTAUDIO_INCLUDE=
+PORTAUDIO_LIB=
+
+PRI_INCLUDE=
+PRI_LIB=
+
+RESAMPLE_INCLUDE=
+RESAMPLE_LIB=
+
+SS7_INCLUDE=
+SS7_LIB=
+
+OPENR2_INCLUDE=
+OPENR2_LIB=
+
+PWLIB_INCLUDE=
+PWLIB_LIB=
+
+AIS_INCLUDE=
+AIS_LIB=
+
+RADIUS_INCLUDE=
+RADIUS_LIB=
+
+FFMPEG_INCLUDE=
+FFMPEG_LIB=
+
+X11_INCLUDE= 
+X11_LIB= -lX11 
+
+SDL_INCLUDE=
+SDL_LIB=
+
+SDL_IMAGE_INCLUDE=
+SDL_IMAGE_LIB=
+
+SPANDSP_INCLUDE=
+SPANDSP_LIB=
+
+SPEEX_INCLUDE= 
+SPEEX_LIB= -lspeex -lm
+
+SPEEXDSP_INCLUDE= 
+SPEEXDSP_LIB= -lspeexdsp -lm
+
+SQLITE_INCLUDE=
+SQLITE_LIB=
+
+SQLITE3_INCLUDE= 
+SQLITE3_LIB= -lsqlite3 
+
+OPENSSL_INCLUDE= 
+OPENSSL_LIB= -lssl -lcrypto
+
+CRYPTO_INCLUDE= 
+CRYPTO_LIB= -lcrypto 
+
+TONEZONE_INCLUDE=
+TONEZONE_LIB=
+
+USB_INCLUDE= 
+USB_LIB= -lusb 
+
+UNIXODBC_INCLUDE=
+UNIXODBC_LIB=
+
+VORBIS_INCLUDE= 
+VORBIS_LIB= -lvorbis -lm -lvorbisenc
+
+VPB_INCLUDE=
+VPB_LIB=
+
+DAHDI_INCLUDE=
+
+ZLIB_INCLUDE= 
+ZLIB_LIB= -lz 
+
+ISDNNET_INCLUDE=
+ISDNNET_LIB=
+
+MISDN_INCLUDE=
+MISDN_LIB=
+
+SUPPSERV_INCLUDE=
+SUPPSERV_LIB=
+
+CAP_LIB=
+CAP_INCLUDE=
+
+BKTR_INCLUDE=
+BKTR_LIB=
+
+TERMCAP_INCLUDE= 
+TERMCAP_LIB= -ltermcap 
+TERMCAP_DIR=
+
+LIBXML2_INCLUDE=-I/usr/local/include/libxml2
+LIBXML2_LIB=-L/usr/local/lib -lxml2 -lz -liconv -lm
+
+TINFO_INCLUDE=
+TINFO_LIB=
+TINFO_DIR=
+
+# if poll is not present, let the makefile know.
+POLL_AVAILABLE=1
+TIMERFD_INCLUDE=

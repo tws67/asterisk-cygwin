@@ -1,0 +1,3 @@
+<member name="cdr_addon_mysql" displayname="MySQL CDR Backend" remove_on_change="cdr/cdr_addon_mysql.o cdr/cdr_addon_mysql.so">
+	<depend>mysqlclient</depend>
+</member>
